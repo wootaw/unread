@@ -52,7 +52,7 @@ module Unread
 
       def readable_parent
         current_klass = self
-        while(ReadMark.readable_classes.include?(current_klass.superclass)) do
+        while(ReadMark.readable_classes.include?(current_klass)) do
           current_klass = current_klass.superclass
         end
         current_klass
